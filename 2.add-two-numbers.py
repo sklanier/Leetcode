@@ -13,9 +13,26 @@ class ListNode:
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         cur1, cur2 = l1, l2
-        while cur1 and cur2:
-            print(cur1.val, cur2.val)
-            cur1, cur2 = cur1.next, cur2.next
-Solution.addTwoNumbers(ListNode(2), ListNode(5))
+        num1 = []
+        num2 = []
+        out1 = ''
+        out2 = ''
+        answer = []
+        while cur1:
+            num1.append(cur1.val)
+            cur1 = cur1.next
+        while cur2:
+            num2.append(cur2.val)
+            cur2 = cur2.next
+        for _ in num1:
+            out1 += str(_)
+        for _ in num2:
+            out2 += str(_)
+        print(out1)
+        print(out2)
+        final = str(int(out1) + int(out2))
+        for _ in final:
+            answer.append(int(_))
+        return answer
 # @lc code=end
 
