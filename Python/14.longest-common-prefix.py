@@ -7,12 +7,11 @@
 # @lc code=start
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        count = 0
-        print(strs[0])
-        # 
-        for i in range(len(strs)):
-            for j in range(len(strs[i])+1):
-                print(strs[i][:j])
+        #start with first letter from first string
+        i = 0
+        print(strs[i][:1])
+        lcp = strs[i][:1]
+        if lcp 
         
 
 # @lc code=end
