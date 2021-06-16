@@ -8,11 +8,7 @@ from typing import List
 # @lc code=start
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        output = []
-        for num in nums:
-            if num not in output:
-                output.append(num)
-        return output
+        for i in range(len(nums)-1,0,-1):
+            if nums[i] == nums[i-1]:
+                del nums[i]
 # @lc code=end
-
-Solution.removeDuplicates("self", [1,3,4,5,6,6])
