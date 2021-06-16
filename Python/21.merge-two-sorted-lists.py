@@ -6,29 +6,32 @@
 
 # @lc code=start
 # Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-class LinkedList:
-    def __init__(self):
-        self.head = None
-
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        l3 = None
-        cur1 = l1
-        cur2 = l2
-        while cur1 and cur2:
-            if cur1.value <= cur2.value:
-                l3
+        dummyNode = ListNode(0)
 
-    def push(self, value):
-        new_node = ListNode(value)
-        new_node.next = self.head
-        self.head = new_node
+        cur = dummyNode
+        while True:
+            if l1 is None:
+                cur.next = l2
+                break
+            if l2 is None:
+                cur.next = l1
+                break
 
-Solution.mergeTwoLists([1,2,4])
+            if l1.val <= l2.val:
+                cur.next = l1
+                l1 = l1.next
+            else:
+                cur.next = l2
+                l2 = l2.next
+            
+            cur = cur.next
+        
+        return dummyNode.next
 # @lc code=end
 
