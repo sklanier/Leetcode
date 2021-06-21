@@ -7,6 +7,8 @@
 # @lc code=start
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+        if target in nums:
+            return nums.index(target)
         
 # @lc code=end
 
